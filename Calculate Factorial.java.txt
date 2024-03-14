@@ -1,0 +1,57 @@
+
+//Calculate Factorial
+
+import java.util.Arrays;
+import java.util.Stack;
+
+public class CalculateFactorial {
+
+    public static void main(String[] args){
+
+
+        Integer[] firstFactorial = new Integer[]{1,2,3,4,5};
+
+
+        System.out.println("Input: 5 Output: 120 Explanation: 5!"+"\n");
+
+
+        for(Integer i = 0; i <= firstFactorial.length -1; i++){
+
+         if(i == firstFactorial.length -1) {
+
+             System.out.println("The Factorial of number 5! = "+factorial(firstFactorial[i])+"\n");
+
+         }
+
+        }
+
+        System.out.println("\n");
+
+        System.out.println("Input: 0 Output: 1 Explanation: 0! is defined as 1."+"\n");
+
+        Integer[] secondFactorial = new Integer[]{0};
+
+        for(Integer j = 0; j <= secondFactorial.length - 1; j++){
+
+
+            System.out.println("The Factorial of number 0! = "+factorial(secondFactorial[j]));
+        }
+
+
+    }
+
+    public static Integer factorial(Integer facNum){
+
+
+        if(facNum == 0){
+
+            System.out.println("Please enter positive numbers "+"\n");
+            return 1;
+        }
+
+
+
+        return  facNum * factorial(facNum - 1);
+
+    }
+}
